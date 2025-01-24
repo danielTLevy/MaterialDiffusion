@@ -56,7 +56,7 @@ data:
       val: 256
       test: 256
 logging:
-  val_check_interval: 5
+  val_check_interval: 1
   progress_bar_refresh_rate: 20
   wandb:
     name: ${expname}

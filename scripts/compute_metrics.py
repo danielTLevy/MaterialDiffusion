@@ -310,7 +310,7 @@ class OptEval(object):
 
 
 def get_file_paths(root_path, task, label='', suffix='pt'):
-    if args.label == '':
+    if label == '':
         out_name = f'eval_{task}.{suffix}'
     else:
         out_name = f'eval_{task}_{label}.{suffix}'

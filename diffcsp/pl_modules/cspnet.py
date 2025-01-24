@@ -78,7 +78,7 @@ class CSPLayer(nn.Module):
         return edge_features
 
     def node_model(self, node_features, edge_features, edge_index):
-
+        torch.use_deterministic_algorithms(False)
         agg = scatter(edge_features, edge_index[0], dim = 0, reduce='mean', dim_size=node_features.shape[0])
         agg = torch.cat([node_features, agg], dim = 1)
         out = self.node_mlp(agg)

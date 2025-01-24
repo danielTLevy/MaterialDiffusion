@@ -1,10 +1,10 @@
 # log frequency
-val_check_interval: 5
+val_check_interval: 1
 progress_bar_refresh_rate: 1
 
 wandb:
   name: ${expname}
-  project: diffcsp
+  project: diffcsp_loss
   entity: null
   log_model: True
   mode: 'online'
